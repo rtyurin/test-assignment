@@ -1,0 +1,27 @@
+.wrapper {
+  padding: 20px;
+}
+
+.messagesBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 10px 0;
+  overflow-wrap: break-word;
+  background-color: #fafafa;
+}
+
+.sendField {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.sendField > button {
+  margin-left: 10px;
+}

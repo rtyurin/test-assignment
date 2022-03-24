@@ -1,0 +1,15 @@
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: cadetblue;
+  margin-bottom: 6px;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.createdAt {
+  margin-left: 30px;
+}
