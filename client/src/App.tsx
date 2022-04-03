@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Message } from './components/Message'
 import { ChatBox } from './components/ChatBox'
 import { IMessage } from './types'
-import { Input } from './components/Input'
 
 type ResponseT = {
   result: {
@@ -16,7 +14,7 @@ function App() {
   const [loading, setLoading] = useState<boolean>(true)
 
   useEffect(() => {
-    fetch('http://localhost:3001/messages')
+    fetch(`http://localhost:3001/messages?chatId=123`)
       .then((res) => res.json())
       .then((res: ResponseT) => {
         setData(res)

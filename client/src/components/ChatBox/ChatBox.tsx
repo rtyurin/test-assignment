@@ -23,6 +23,23 @@ export const ChatBox = ({ messages }: IChatBoxProps) => {
       e.preventDefault()
       e.stopPropagation()
 
+      fetch('http://localhost:3001/message', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          authorId: 1,
+          chatId: 123,
+          message: inputValue,
+          id: new Date().getTime(),
+          createdTimestamp: new Date().getTime(),
+        }),
+      })
+        .then(() => console.log('sent'))
+        .catch(() => console.log('error'))
+
       setMessagesState((prevMessages) => [
         ...prevMessages,
         {
